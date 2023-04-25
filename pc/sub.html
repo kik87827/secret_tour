@@ -27,7 +27,7 @@
 		<!-- header -->
 		<header class="header_zone">
             <div class="head_util_row">
-                <div class="header_inner">
+                <div class="head_util_inner">
                     <h1 class="toplogo"><a href="#" class="toplogo_link"><img src="./images/toplogo.png" alt="시크릿투어"></a></h1>
                     <div class="topsearch_field">
                         <a href="#" class="search_keyword_item">
@@ -35,7 +35,7 @@
                             <span class="keyword_text">인기검색어</span>
                         </a>
                         <div class="topsearch_form">
-                            <input type="text" class="topsearch_input">
+                            <input type="text" class="topsearch_input" placeholder="검색어를 입력하세요">
                             <a href="#" class="btn_topsearch_submit"><span class="hdtext">검색</span></a>
                         </div>
                     </div>
@@ -75,21 +75,21 @@
 				<div class="swiper-container sv_container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/sv_01.jpg)"></a>
+							<a href="#" class="sv_item" style="background-image:url(./images/sv_01.jpg)"></a>
 						</div>
 						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/sv_02.jpg)"></a>
+							<a href="#" class="sv_item" style="background-image:url(./images/sv_02.jpg)"></a>
 						</div>
 						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/sv_03.jpg)"></a>
+							<a href="#" class="sv_item" style="background-image:url(./images/sv_03.jpg)"></a>
 						</div>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_mv_control next_control"><span class="hdtext">다음</span></a>
-				<div class="mv_bottom_control_wrap">
+				<div class="mv_bottom_control_wrap type2">
 					<div class="mv_bottom_in_control">
 						<div class="mv_bottom_cols has_navi">
-							<div class="swiper-pagination main_visual_paging">
+							<div class="swiper-pagination sub_visual_paging">
 							</div>
 						</div>
 						<div class="mv_bottom_cols has_auto">
@@ -119,7 +119,7 @@
                     <div class="mc_data_item">
                         <div class="mc_data_title_row">
                             <div class="mc_data_title_item">
-                                <p class="mc_data_title_obj has_highlight"><span class="highlight">이달의</span></p>
+                                <p class="mc_data_title_main has_highlight"><span class="highlight">이달의</span></p>
                                 <p class="mc_data_title_obj">핫 플레이스</p>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                                                 </a>
                                                 <div class="spec_rows">
                                                     <a href="#" class="spec_inlink_item">
-                                                        <span class="box_label">BEST</span>
+                                                        <span class="box_label type2">BEST</span>
                                                         <div class="mc_spec_sub_copy">2인출발 가능한 여행 함께 떠나는 위해여행</div>
                                                         <div class="mc_spec_main_copy">치앙마이 다색골프 5~6일 #리버데일CC</div>
                                                         <div class="mc_spec_else_copy">부산출발 상품번호:P-A-KE-22</div>
@@ -163,7 +163,7 @@
                                                 </a>
                                                 <div class="spec_rows">
                                                     <a href="#" class="spec_inlink_item">
-                                                        <span class="box_label">BEST</span>
+                                                        <span class="box_label type2">BEST</span>
                                                         <div class="mc_spec_sub_copy">2인출발 가능한 여행 함께 떠나는 위해여행</div>
                                                         <div class="mc_spec_main_copy">치앙마이 다색골프 5~6일 #리버데일CC</div>
                                                         <div class="mc_spec_else_copy">부산출발 상품번호:P-A-KE-22</div>
@@ -191,7 +191,7 @@
                                                 </a>
                                                 <div class="spec_rows">
                                                     <a href="#" class="spec_inlink_item">
-                                                        <span class="box_label">BEST</span>
+                                                        <span class="box_label type2">BEST</span>
                                                         <div class="mc_spec_sub_copy">2인출발 가능한 여행 함께 떠나는 위해여행</div>
                                                         <div class="mc_spec_main_copy">치앙마이 다색골프 5~6일 #리버데일CC</div>
                                                         <div class="mc_spec_else_copy">부산출발 상품번호:P-A-KE-22</div>
@@ -219,7 +219,7 @@
                                                 </a>
                                                 <div class="spec_rows">
                                                     <a href="#" class="spec_inlink_item">
-                                                        <span class="box_label">BEST</span>
+                                                        <span class="box_label type2">BEST</span>
                                                         <div class="mc_spec_sub_copy">2인출발 가능한 여행 함께 떠나는 위해여행</div>
                                                         <div class="mc_spec_main_copy">치앙마이 다색골프 5~6일 #리버데일CC</div>
                                                         <div class="mc_spec_else_copy">부산출발 상품번호:P-A-KE-22</div>
@@ -992,6 +992,12 @@
             </div>
 		</section>
 		<!-- // middle -->
+		<script>
+			 document.addEventListener("DOMContentLoaded", () => {
+                subVisual();
+				thisMonthBanner();
+            });
+		</script>
 		<!-- footer -->
 		<footer class="footer_zone">
 			<div class="btn_pagetop_row">
