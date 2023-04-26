@@ -271,7 +271,7 @@
 									<div class="board_thumnail_spec_cols">
 										<a href="#" class="board_spectext_group">
 											<div class="board_spec_title">[스마트패키지] "라틴의 꿈!" 파타고니아+남미5개국 26일 _ 엘 찰텐,비냐델마르 숙박</div>
-                                            <div class="board_spec_sub">2인출발 가능한 여행 함께 떠나는 위해여행</div>
+                                            <div class="board_spec_subtext">2인출발 가능한 여행 함께 떠나는 위해여행</div>
 											<div class="board_spec_sub_g">
                                                 <div class="price_num_group before_type">
                                                     <span class="price_num_label">비회원가</span>
@@ -312,6 +312,7 @@
 												<a href="#" class="btn_togglebox d_list_option"><span class="btn_togglebox_in">출발일 보기</span></a>
 											</div>
 										</div>
+										<button type="button" class="btn_thum_like"></button>
 									</div>
 								</div>
 								<div class="list_option_zone">
@@ -505,7 +506,7 @@
 									<div class="board_thumnail_spec_cols">
 										<a href="#" class="board_spectext_group">
 											<div class="board_spec_title">[세미프리] 아모르파티 ! 사랑에 빠진 남미여행 세미 30일 (국내선 8회 또는 9회) - 환율 1250원 기준</div>
-											<div class="board_spec_sub">2인출발 가능한 여행 함께 떠나는 위해여행</div>
+											<div class="board_spec_subtext">2인출발 가능한 여행 함께 떠나는 위해여행</div>
 											<div class="board_spec_sub_g">
                                                 <div class="price_num_group before_type">
                                                     <span class="price_num_label">비회원가</span>
@@ -546,6 +547,7 @@
 												<a href="#" class="btn_togglebox d_list_option"><span class="btn_togglebox_in">출발일 보기</span></a>
 											</div>
 										</div>
+										<button type="button" class="btn_thum_like"></button>
 									</div>
 								</div>
 								<div class="list_option_zone">
@@ -739,7 +741,7 @@
 									<div class="board_thumnail_spec_cols">
 										<a href="#" class="board_spectext_group">
 											<div class="board_spec_title">[세미프리] 아모르파티 ! 사랑에 빠진 남미여행 세미 30일 (국내선 8회 또는 9회) - 환율 1250원 기준</div>
-											<div class="board_spec_sub">2인출발 가능한 여행 함께 떠나는 위해여행</div>
+											<div class="board_spec_subtext">2인출발 가능한 여행 함께 떠나는 위해여행</div>
 											<div class="board_spec_sub_g">
                                                 <div class="price_num_group before_type">
                                                     <span class="price_num_label">비회원가</span>
@@ -780,6 +782,7 @@
 												<a href="#" class="btn_togglebox d_list_option"><span class="btn_togglebox_in">출발일 보기</span></a>
 											</div>
 										</div>
+										<button type="button" class="btn_thum_like"></button>
 									</div>
 								</div>
 								<div class="list_option_zone">
@@ -996,6 +999,14 @@
 			 document.addEventListener("DOMContentLoaded", () => {
                 subVisual();
 				thisMonthBanner();
+				listToggleOption();
+
+				document.querySelectorAll(".btn_thum_like").forEach((item)=>{
+                    item.addEventListener("click",(e)=>{
+                        e.preventDefault();
+                        e.currentTarget.classList.toggle("active");
+                    });
+                });
             });
 		</script>
 		<!-- footer -->

@@ -225,6 +225,10 @@ function thisMonthBanner(){
 				delay: 2500,
 				disableOnInteraction: false
 			},
+			navigation: {
+                nextEl: '.primary_content_wrap .btn_primary_control.next_control',
+                prevEl: '.primary_content_wrap .btn_primary_control.prev_control',
+            },
 			pagination: {
 				clickable: true,
 				el: ".swiper-pagination.primary_paging",
@@ -246,5 +250,31 @@ function quickMenu(){
 		}else{
 			quick_item_zone.classList.remove("fixed");
 		}
+	});
+}
+
+function listToggleOption(){
+	const d_list_option = document.querySelectorAll(".d_list_option");
+	const d_fold_option = document.querySelectorAll(".d_fold_option");
+	d_list_option.forEach((element) => {
+		element.addEventListener("click", (e) => {
+			e.preventDefault();
+			let thisObj = e.currentTarget;
+			let thisObjParent = thisObj.closest(".board_thumnail_list > li");
+			let thisObjTarget = thisObjParent.querySelector(".list_option_zone");
+			thisObj.classList.toggle("type2");
+			thisObjTarget.classList.toggle("active");
+		}, false);
+	});
+	d_fold_option.forEach((element) => {
+		element.addEventListener("click", (e) => {
+			e.preventDefault();
+			let thisObj = e.currentTarget;
+			let thisObjParent = thisObj.closest(".board_thumnail_list > li");
+			let thisObjTarget = thisObjParent.querySelector(".list_option_zone");
+			let thisObjCall = thisObjParent.querySelector(".d_list_option");
+			thisObjCall.classList.remove("type2");
+			thisObjTarget.classList.remove("active");
+		}, false);
 	});
 }
