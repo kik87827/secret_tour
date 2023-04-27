@@ -1,0 +1,3 @@
+
+.clamp{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;line-height:1.3;}
+li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
