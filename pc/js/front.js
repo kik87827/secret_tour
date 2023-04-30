@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded",() => {
 	layoutFunc();
 });
 window.addEventListener("load",() => {
+	headerGnb();
 });
 
 function subMinHeight(){
@@ -242,8 +243,7 @@ function thisMonthBanner(){
 function quickMenu(){
 	const mc_wrap = document.querySelector(".mc_wrap");
 	const quick_item_zone = document.querySelector(".quick_item_zone");
-	let mc_wrap_pos = mc_wrap !== null ? mc_wrap.offsetTop+90 : 0;
-	console.log(window.scrollY , mc_wrap_pos);
+	let mc_wrap_pos = mc_wrap !== null ? mc_wrap.getBoundingClientRect().top + window.scrollY +90 : 0;
 	window.addEventListener("scroll",(e)=>{
 		if(window.scrollY > mc_wrap_pos){
 			quick_item_zone.classList.add("fixed");
@@ -276,5 +276,169 @@ function listToggleOption(){
 			thisObjCall.classList.remove("type2");
 			thisObjTarget.classList.remove("active");
 		}, false);
+	});
+}
+
+function stickyBox(){
+	const html_dom = document.querySelector("html");
+	const body_dom = document.querySelector("body");
+	const footer_dom = document.querySelector(".footer_zone");
+	let footer_dom_height = footer_dom !== null ? footer_dom.getBoundingClientRect().height : 0;
+	const pay_box_item = document.querySelector(".pay_control_box_wrap");
+	let pay_pos = pay_box_item !== null ? pay_box_item.getBoundingClientRect().top + window.scrollY : 0;
+	console.log()
+	window.addEventListener("scroll",(e)=>{
+		footer_dom_height = footer_dom !== null ? footer_dom.getBoundingClientRect().height : 0;
+		if(window.scrollY > pay_pos){
+			pay_box_item.classList.add("fixed");
+		}else{
+			pay_box_item.classList.remove("fixed");
+		}
+	});
+}
+
+
+function detailMainSwiper(){
+	let data_container_slide = document.querySelectorAll(".detail_photo_container .swiper-slide");
+	let data_swiper_obj = null;
+	if(data_swiper_obj !== null){
+		data_swiper_obj.update();
+	}else{
+		if(data_container_slide.length>1){
+			data_swiper_obj = new Swiper(".detail_photo_container", {
+				speed : 1000,
+				navigation: {
+					nextEl: '.btn_detail_control.next_control',
+					prevEl: '.btn_detail_control.prev_control',
+				},
+				pagination: {
+					el: '.detail_photo_paging.swiper-pagination',
+				}
+			});
+		}
+	}
+}
+
+function tabDetailFunc(){
+	const has_tabguide = document.querySelector(".has_tabguide");
+	const getdata_hortab = has_tabguide.querySelectorAll(".getdata_hortab");
+	const getdata_tabcont = has_tabguide.querySelectorAll(".getdata_tabcont");
+	let hortab_active = Array.from(getdata_hortab).filter(item => item.classList.contains("active"))[0];
+	let tabcont_active = Array.from(getdata_tabcont).filter(item => item.classList.contains("active"))[0];
+	
+	getdata_hortab.forEach(item => {
+		item.addEventListener("click",(e)=>{
+			e.preventDefault();
+			const targetItem = e.currentTarget;
+			const targetItemDom = has_tabguide.querySelector(targetItem.getAttribute("href"));
+			if(hortab_active){
+				hortab_active.classList.remove("active");
+			}
+			if(tabcont_active){
+				tabcont_active.classList.remove("active");
+			}
+			if(!!targetItemDom){
+				targetItemDom.classList.add("active");
+				tabcont_active = targetItemDom;
+			}
+			targetItem.classList.add("active");
+			hortab_active = targetItem;
+		});
+	});
+}
+
+
+function toggleDetailBox(option){
+	const btn_toggle_control = document.querySelectorAll(".btn_toggle_control");
+	btn_toggle_control.forEach((item)=>{
+
+		item.addEventListener("click",(e)=>{
+			e.preventDefault();
+			const targetItem = e.currentTarget;
+			const targetItemText = targetItem.querySelector(".toggle_target_text");
+			const parentBox = targetItem.closest(".toggle_detail_box");
+			const toggleContent = parentBox.querySelector(".toggle_detail_content_row");
+			
+			targetItem.classList.toggle("fold");
+			toggleContent.classList.toggle("hidden");
+			if(toggleContent.classList.contains("hidden")){
+				targetItemText.textContent = option.openText;
+			}else{
+				targetItemText.textContent = option.closeText;
+			}
+		});
+	});
+}
+
+function headerGnb(){
+	const head_two_bg = document.querySelector(".head_two_bg");
+	const head_gnb_row = document.querySelector(".head_gnb_row");
+	const head_gnb_item = document.querySelectorAll(".head_gnb_item");
+	const btn_headtotal_menu = document.querySelector(".btn_headtotal_menu");
+	const twognb_item_list_wrap = document.querySelectorAll(".twognb_item_list_wrap");
+	let twoArray = [];
+	let maxHeight = 0;
+	twognb_item_list_wrap.forEach((item)=>{
+		twoArray.push(item.getBoundingClientRect().height);
+	});
+	maxHeight = Math.max.apply(null,twoArray);
+	head_two_bg.style.height = maxHeight + "px";
+
+	head_gnb_row.classList.add("ready");
+
+	head_gnb_item.forEach((item)=>{
+		item.addEventListener("mouseenter",()=>{
+			menuOpen();
+		});
+	});
+	head_gnb_row.addEventListener("mouseleave",()=>{
+		menuClose();
+	});
+	btn_headtotal_menu.addEventListener("click",()=>{
+		head_gnb_row.classList.toggle("active");
+	});
+
+	function menuOpen(){
+		head_gnb_row.classList.add("active");
+	}
+
+	function menuClose(){
+		head_gnb_row.classList.remove("active");
+	}
+}
+
+
+function detailBannerSwiper(){
+	const detail_banner_fxcont = document.querySelectorAll(".detail_banner_fxcont");
+	detail_banner_fxcont.forEach((item,index)=>{
+		const slider_parent = item;
+		const slider_container = slider_parent.querySelector(".detail_banner_fxswiper");
+		const slider_slide = slider_container.querySelectorAll(".swiper-slide");
+		slider_parent.setAttribute("id","swiperParent0"+(index+1));
+		slider_container.setAttribute("id","swiper0"+(index+1));
+		console.log(slider_slide);
+		if(slider_slide.length){
+			(new Function(
+			`
+				${slider_container.getAttribute("id")} = new Swiper("#${slider_container.getAttribute("id")}", {
+					loop: true,
+					speed : 800,
+					pagination : {
+						el: "#${slider_parent.getAttribute("id")} .swiper-pagination",
+						clickable : true
+					}
+				});
+			`
+			)());
+		}
+	})
+}
+
+function dataCaseDesign(){
+	const mc_thumbanner_list = document.querySelectorAll(".mc_thumbanner_list");
+	mc_thumbanner_list.forEach((item)=>{
+		const thisList = item;
+		const thisListChildren = Array.from(thisList.children);
+		thisList.classList.add("length"+thisListChildren.length);
 	});
 }

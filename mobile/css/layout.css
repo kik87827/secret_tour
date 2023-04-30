@@ -18,27 +18,29 @@
     font-style: normal;
     font-weight: 400;
     src: local('Noto Sans KR'),
-        url('./webfont/NotoSans-Regular.woff2') format("woff2");
+        url('./webfont/NotoSans-Regular.woff') format('woff');
 }
 @font-face {
     font-family: 'Noto Sans KR';
+    src: url('./webfont/NotoSans-Medium.woff2') format('woff2'),
+         url('./webfont/NotoSans-Medium.woff') format('woff');
     font-style: normal;
     font-weight: 500;
-    src: local('Noto Sans KR'),
-        url('./webfont/NotoSans-Medium.woff2') format("woff2");
 }
 @font-face {
     font-family: 'Noto Sans KR';
-    font-style: normal;
+    src: url('./webfont/NotoSans-Bold.woff2') format('woff2'),
+         url('./webfont/NotoSans-Bold.woff') format('woff');
     font-weight: 700;
-    src: local('Noto Sans KR'), 
-        url('./webfont/NotoSans-Bold.woff2') format("woff2");
+    font-style: normal;
+
 }
 
 
 
 .hdtext{display:inline-block;width:0;height:0;overflow:hidden;line-height:0;color:transparent;position:absolute;top:0;left:-99999px;}
 html.smooth {scroll-behavior: smooth;}
+.touch_disabled{overflow:hidden;touch-action: none;position:relative;}
 .page_wrap{min-width:280px;}
 
 /* header */
