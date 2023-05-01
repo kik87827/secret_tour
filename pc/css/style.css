@@ -740,7 +740,7 @@
 .pay_control_row{border-bottom:1px solid #dddddd;padding:28px 30px;}
 .pay_control_row:last-of-type{border-bottom:0;}
 .pay_control_btn_row{}
-.btn_pay_main{display:block;font-size:16px;color:#fff;background:#e72837;text-align: center;padding:17px 15px;}
+.btn_pay_main{display:block;font-size:16px;color:#fff;background:#333c4c;text-align: center;padding:17px 15px;}
 .btn_pay_main.type2{background:#f9be00;color:#000;}
 
 .pay_control_spec_row{margin-top:20px;}
@@ -822,8 +822,7 @@ select.spec_combo{font-family: 'Noto Sans KR';min-width:60px;color:#323232;font-
 
 
 .golf_guide_box {
-    background: url('../images/bg_golf_guide_box.jpg') no-repeat right top;
-    background-size: cover;
+    background: #fffdf6 url('../images/bg_golf_guide_box.jpg') no-repeat right center;
     border: 1px solid #DDD;
     padding: 30px;
     display: -webkit-box;
