@@ -64,7 +64,7 @@
 .swiper-pagination.mv_banner_paging .swiper-pagination-bullet{opacity:1;width:10px;height:10px;margin:0 2px;border-radius:100%;background:#d2d2d2;}
 .swiper-pagination.mv_banner_paging .swiper-pagination-bullet.swiper-pagination-bullet-active{opacity:1;background:#4e4e4e;}
 
-.mc_wrap{padding:125px 0 80px;position:relative;}
+.mc_wrap{padding:125px 0 0;position:relative;}
 .mc_row.mc_data_group{}
 
 .mc_row{margin:0 auto 0;width:1200px;}
@@ -151,8 +151,8 @@
 
 
 .quick_item_zone{z-index:100;position:absolute;top:0;left:50%;width:1200px;transform: translateX(-50%);height:0;}
-.quick_item_zone.fixed{position:fixed;}
-.quick_item_zone.fixed .quick_item{top:30px;}
+.quick_item_zone.fixed{position:fixed;top:188px;}
+.quick_item_zone.fixed .quick_item{top:20px;}
 .quick_item{background:#fff;box-sizing: border-box;width:98px;border:1px solid #dadada;border-radius:7px;position:absolute;top:86px;left:-150px;text-align: center;transition:.3s;}
 .quick_item_top{border-bottom:1px solid #e6e6e6;padding:10px 0;position:relative;}
 .quick_item_top > img{vertical-align: top;}
@@ -783,7 +783,7 @@ select.spec_combo{font-family: 'Noto Sans KR';min-width:60px;color:#323232;font-
 /* landing */
 .btn_oplayer{width:248px;height:45px;display:block;position:absolute;top:0;right:0;}
 .page_wrap.landing_wrap{padding-bottom:60px;}
-.landing_top{border-top:2px solid #ffc000;background:url("../images/member_cash_top.jpg") no-repeat 50% 0;height:746px;}
+.landing_top{background:url("../images/member_cash_top.jpg") no-repeat 50% 0;height:746px;}
 .landing_tape{background:#333333;text-align: center;}
 .landing_tape.type2{background:#303030;}
 .landing_tape_item{position:relative;width:1000px;margin:0 auto;}
@@ -823,8 +823,7 @@ select.spec_combo{font-family: 'Noto Sans KR';min-width:60px;color:#323232;font-
 
 .golf_guide_box {
     background: #fffdf6 url('../images/bg_golf_guide_box.jpg') no-repeat right center;
-    border: 1px solid #DDD;
-    padding: 30px;
+    padding: 25px 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -832,26 +831,18 @@ select.spec_combo{font-family: 'Noto Sans KR';min-width:60px;color:#323232;font-
 }
 
 .golf_guide_box h4 {
-    float: left;
-    display: inline-block;
+    
+    display: flex; align-items: center;
     text-transform: uppercase;
-    font-size: 24px;
-    margin-top: 15px;
-    margin-right: 45px;
+    font-size: 24px; font-weight:500; margin-right:50px;
 }
 
 .golf_guide {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 700px
 }
 
 .golf_guide li {
-    padding: 0;
+    padding: 0 25px 0 0;
     text-align: center;
     font-size: 14px;
     line-height: 18px;
@@ -868,13 +859,13 @@ select.spec_combo{font-family: 'Noto Sans KR';min-width:60px;color:#323232;font-
 }
 
 .golf_guide li p {
-    border-radius: 50%;
+    border-radius: 100%;
+    display:flex;align-items: center;justify-content: center;
     width: 100px;
     height: 100px;
-    border: 1px solid #DDD;
+    border: 1px solid #efe8bd;
     background: #FFF;
     text-align: center;
-    line-height: 100px;
     margin: 0 auto 10px;
 }
 

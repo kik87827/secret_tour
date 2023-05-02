@@ -163,7 +163,7 @@
 												<div class="props_inpara">3/29-5/10 수, 목</div>
 												<div class="props_tail_wrap">
 													<dl class="props_tail_dl">
-														<dt>성인</dt>
+														<dt>비회원가</dt>
 														<dd>
 															<span class="props_price_wrap">
 																<span class="props_price_value">1,299,000</span>
@@ -182,7 +182,7 @@
 												<div class="props_inpara">3/29-5/10 수, 목</div>
 												<div class="props_tail_wrap">
 													<dl class="props_tail_dl">
-														<dt>성인</dt>
+														<dt>회원가</dt>
 														<dd>
 															<span class="props_price_wrap">
 																<span class="props_price_value">1,299,000</span>
@@ -296,7 +296,7 @@
 				</div>
 			</div>
 			<div class="detail_utilcont_wrap">
-				<div class="detail_utilcont" id="tabgo_cont01">
+				<div class="detail_utilcont tabcont show_active" id="tabgo_cont01">
 					<div class="utilcont_total_row">
 						<span class="utilcont_total_label">전체닫기</span>
 						<div class="motion_toggle_item">
@@ -466,7 +466,7 @@
 					</div>
 				</div>
 				<div class="detail_utilcont">
-					<div class="detail_togvitem active" id="tabgo_cont02">
+					<div class="detail_togvitem tabcont active" id="tabgo_cont02">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">선택관광/쇼핑</span></a>
 						<div class="togvitem_cont">
 							<!-- 데이터 연동 -->
@@ -476,7 +476,7 @@
 							<!-- // 데이터 연동 -->
 						</div>
 					</div>
-					<div class="detail_togvitem active" id="tabgo_cont03">
+					<div class="detail_togvitem tabcont active" id="tabgo_cont03">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">참고사항</span></a>
 						<div class="togvitem_cont">
 							<!-- 데이터 연동 -->
@@ -486,7 +486,7 @@
 							<!-- // 데이터 연동 -->
 						</div>
 					</div>
-					<div class="detail_togvitem active" id="tabgo_cont04">
+					<div class="detail_togvitem tabcont active" id="tabgo_cont04">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">약관, 취소 수수료</span></a>
 						<div class="togvitem_cont">
 							<!-- 데이터 연동 -->
@@ -496,7 +496,7 @@
 							<!-- // 데이터 연동 -->
 						</div>
 					</div>
-					<div class="detail_togvitem active" id="tabgo_cont05">
+					<div class="detail_togvitem tabcont active" id="tabgo_cont05">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">골프장정보</span></a>
 						<div class="togvitem_cont detail_banner_fxcont">
 							<!--  -->
@@ -583,7 +583,7 @@
 							<!-- // -->
 						</div>
 					</div>
-					<div class="detail_togvitem active">
+					<div class="detail_togvitem tabcont active">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">숙박정보</span></a>
 						<div class="togvitem_cont detail_banner_fxcont">
 							<!--  -->
@@ -702,7 +702,7 @@
 					closeText : '닫기'
 				});
 				timelineAcc();
-				mctabAnc();
+				flowTab();
 			});
 			
 			window.addEventListener("load",()=>{
@@ -713,16 +713,22 @@
 				detailTogItem();
 			});
 
-			function mctabAnc(){
-				const skticky_tabanc = document.querySelectorAll(".skticky_tabzone .mc_tab");
-				skticky_tabanc.forEach((item)=>{
-					item.addEventListener("click",()=>{
-						//window.scrollTo(0,item.offsetTop);
-						const targetgo = document.querySelector(item.getAttribute("href"))
-						// console.log(targetgo.offsetTop);
-						window.scrollTo(0,targetgo.offsetTop-56);
-					})
-				});
+
+			function flowTab(){
+				const flowtab = document.querySelectorAll(".mc_tab_container .mc_tab");
+				let tabcontActive = Array.from(document.querySelectorAll(".tabcont")).filter(item => item.classList.contains("show_active"))[0];
+				console.log(tabcontActive);
+				flowtab.forEach((item)=>{
+					item.addEventListener("click",(e)=>{
+						e.preventDefault();
+						if(tabcontActive){
+							tabcontActive.classList.remove("show_active");
+						}
+						let thisTarget = document.querySelector(e.currentTarget.getAttribute("href"));
+						thisTarget.classList.add("show_active");
+						tabcontActive=thisTarget;
+					});
+				})
 			}
 
 			function timelineAcc(){

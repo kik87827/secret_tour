@@ -185,7 +185,7 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 /* landing */
 .page_wrap.landing_wrap{max-width:768px;margin:0 auto;font-size:0;line-height:0;}
 .page_wrap.landing_wrap img{width:100%;}
-.landing_top{border-top:4px solid #ffc000;}
+/* .landing_top{border-top:2px solid #ffc000;} */
 .landing_mid img{display:block;}
 .landing_btn_row{padding:33px 10px;}
 .landing_banner_list{}
@@ -198,7 +198,7 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 /* sub */
 .mc_container{padding:21px;}
 .mc_tabzone{margin:0 -21px;}
-.skticky_tabzone_wrap{position:relative;height:35px;padding:0 21px;}
+.skticky_tabzone_wrap{position:relative;height:35px;padding:0 21px;margin-bottom:15px;}
 .skticky_tabzone_wrap .mc_tabzone{}
 .skticky_tabzone_wrap .mc_tabzone{}
 .skticky_tabzone.fixed{z-index:50;position:fixed;top:0;background:#fff;border-bottom:1px solid #e7e7e7;padding:10px 0;}
@@ -314,7 +314,7 @@ input.props_item:checked + .props_label:after{opacity:1;}
 .props_inpara{text-align: right;}
 .props_tail_wrap{}
 .props_tail_dl{display:flex;align-items: center;justify-content: flex-end;}
-.props_tail_dl dt{margin-right:5px;}
+.props_tail_dl dt{margin-right:10px;}
 .props_tail_dl dd{}
 .props_price_wrap{font-size:17px;display:flex;align-items: center;}
 .props_price_value{font-weight:500}
@@ -379,8 +379,10 @@ input.props_item:checked + .props_label:after{opacity:1;}
 .detail_utilcont_zone .mc_tab.active .mc_tab_text{}
 
 .detail_utilcont_wrap{}
+.detail_utilcont_wrap .tabcont{display:none;}
+.detail_utilcont_wrap .tabcont.show_active{display:block;}
 .detail_utilcont{}
-.utilcont_total_row{padding:15px 20px;display:flex;justify-content: flex-end;}
+.utilcont_total_row{padding:0 20px 15px;display:flex;justify-content: flex-end;}
 .utilcont_total_label{font-size:13px;margin-right:10px;}
 .motion_toggle_item{display:inline-flex;width:47px;height:24px;flex-direction:column-reverse;}
 input.motion_check{width:0;height:0;overflow: hidden;appearance: none;opacity:0;position:relative;z-index:-1;}

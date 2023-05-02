@@ -24,77 +24,195 @@
 
 <body class="front_body">
 	<div class="page_wrap landing_wrap">
-		<div class="landing_top"></div>
-		<div class="landing_tape">
-			<div class="landing_tape_item">
-				<img src="./images/gray_copy_item.png" alt="">
-				<a href="#" class="btn_oplayer"></a>
+		<!-- header -->
+		<header class="header_zone">
+            <div class="head_util_row">
+                <div class="head_util_inner">
+                    <h1 class="toplogo"><a href="#" class="toplogo_link"><img src="./images/toplogo.png" alt="시크릿투어"></a></h1>
+                    <div class="topsearch_field">
+                        <a href="#" class="search_keyword_item">
+                            <span class="key_label">HOT</span>
+                            <span class="keyword_text">인기검색어</span>
+                        </a>
+                        <div class="topsearch_form">
+                            <input type="text" class="topsearch_input" placeholder="검색어를 입력하세요">
+                            <a href="#" class="btn_topsearch_submit"><span class="hdtext">검색</span></a>
+                        </div>
+                    </div>
+                    <div class="toputil_wrap">
+                        <ul class="head_util_list">
+                            <li><a href="#" class="util_box">로그인</a></li>
+                            <li><a href="#" class="util_text_item ico_men">회원가입</a></li>
+                            <li><a href="#" class="util_text_item">마이페이지</a></li>
+                            <li><a href="#" class="util_text_item">고객센터</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="head_gnb_row">
+                <div class="head_row_inner">
+                    <ul class="head_gnb_list">
+                        <li>
+                            <a href="#" class="head_gnb_item">동남아골프</a>
+                            <div class="twognb_item_list_wrap">
+                                <ul class="twognb_item_list">
+                                    <li><a href="#" class="twognb_item">베트남</a></li>
+                                    <li><a href="#" class="twognb_item">태국</a></li>
+                                    <li><a href="#" class="twognb_item">필리핀</a></li>
+                                    <li><a href="#" class="twognb_item">라오스</a></li>
+                                    <li><a href="#" class="twognb_item">말레이시아</a></li>
+                                    <li><a href="#" class="twognb_item">캄보디아</a></li>
+                                    <li><a href="#" class="twognb_item">브루나이</a></li>
+                                    <li><a href="#" class="twognb_item">자카르타</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="head_gnb_item">일본골프</a>
+                            <div class="twognb_item_list_wrap">
+                                <ul class="twognb_item_list">
+                                    <li><a href="#" class="twognb_item">일본</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="head_gnb_item">중국/대만</a>
+                            <div class="twognb_item_list_wrap">
+                                <ul class="twognb_item_list">
+                                    <li><a href="#" class="twognb_item">중국</a></li>
+                                    <li><a href="#" class="twognb_item">대만</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="head_gnb_item">괌/사이판</a>
+                            <div class="twognb_item_list_wrap">
+                                <ul class="twognb_item_list">
+                                    <li><a href="#" class="twognb_item">괌</a></li>
+                                    <li><a href="#" class="twognb_item">사이판</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="head_gnb_item">기타지역</a>
+                            <div class="twognb_item_list_wrap">
+                                <ul class="twognb_item_list">
+                                    <li><a href="#" class="twognb_item">하와이</a></li>
+                                    <li><a href="#" class="twognb_item">몽골</a></li>
+                                    <li><a href="#" class="twognb_item">우즈베키스탄</a></li>
+                                    <li><a href="#" class="twognb_item">두바이</a></li>
+                                    <li><a href="#" class="twognb_item">호주</a></li>
+                                    <li><a href="#" class="twognb_item">뉴질랜드</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="head_gnb_item">국내골프</a>
+                        </li>
+                        <li>
+                            <a href="#" class="head_gnb_item">커뮤니티</a>
+                            <div class="twognb_item_list_wrap">
+                                <ul class="twognb_item_list">
+                                    <li><a href="#" class="twognb_item">여행후기</a></li>
+                                    <li><a href="#" class="twognb_item">회원소통공간</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="btn_headtotal_menu">
+                        <span class="headtotal_menu_text">전체메뉴</span>
+                        <i class="headtotal_icon"><span class="headtotal_icon_row"></span></i>
+                    </a>
+                </div>
+                <div class="head_two_bg"></div>
+            </div>
+		</header>
+		<!-- // header -->
+		<div class="landing_mid_wrap">
+			<div class="landing_top"></div>
+			<div class="landing_tape">
+				<div class="landing_tape_item">
+					<img src="./images/gray_copy_item.png" alt="">
+					<a href="#ticket_wrap" class="btn_oplayer" id="btn_ticket_go"></a>
+				</div>
+				<script>
+					window.addEventListener("load",()=>{
+						document.querySelector("#btn_ticket_go").addEventListener("click",(e)=>{
+							e.preventDefault();
+							window.scrollTo({
+								top: document.querySelector("#ticket_wrap").getBoundingClientRect().top + window.scrollY - 220,
+								left: 0,
+								behavior: "smooth",
+							});
+						});
+					});
+				</script>
 			</div>
-		</div>
-		<div class="landing_mid">
-			<div class="landing_mid_imgitem"><img src="./images/pay_center_01.jpg" alt=""></div>
-			<div class="landing_mid_imgitem"><img src="./images/pay_center_02.jpg" alt=""></div>
-			<div class="landing_mid_imgitem"><img src="./images/pay_center_03.jpg" alt=""></div>
-		</div>
-		<div class="landing_mid2">
-			<div class="landing_mid2_imgitem"><img src="./images/pay_bottom.png" alt=""></div>
-		</div>
-		<div class="landing_tape type2">
-			<div class="landing_tape_item"><img src="./images/gray_copy_item2.png" alt=""></div>
-		</div>
-		<div class="landing_ticket_wrap">
-			<div class="landing_ticket_box_group">
-				<div class="landing_ticket_box_cols">
-					<img src="./images/pay_ticket01.png" alt="">
-					<a href="#" class="btn_oplayer"></a>
-				</div>
-				<div class="landing_ticket_box_cols">
-					<img src="./images/pay_ticket02.png" alt="">
-					<a href="#" class="btn_oplayer"></a>
-				</div>
-				<div class="landing_ticket_box_cols">
-					<img src="./images/pay_ticket03.png" alt="">
-					<a href="#" class="btn_oplayer"></a>
-				</div>
+			<div class="landing_mid">
+				<div class="landing_mid_imgitem"><img src="./images/pay_center_01.jpg" alt=""></div>
+				<div class="landing_mid_imgitem"><img src="./images/pay_center_02.jpg" alt=""></div>
+				<div class="landing_mid_imgitem"><img src="./images/pay_center_03.jpg" alt=""></div>
 			</div>
-			<div class="landing_data_table_wrap">
-				<table class="landing_data_table">
-					<tr>
-						<th><span class="landing_data_label">상품명</span></th>
-						<td><div class="landing_data_value">1년 회원권 / 5년 회원권 / 평생 회원권</div></td>
-					</tr>
-					<tr>
-						<th><span class="landing_data_label">회원 기간</span></th>
-						<td><div class="landing_data_value">회원권 결제 후 첫 출발일로 부터 유효기간 내 (1년 / 5년 / 평생)</div></td>
-					</tr>
-					<tr>
-						<th><span class="landing_data_label">유의사항</span></th>
-						<td>
-							<div class="landing_data_value">
-								<ul class="indent_item_list">
-									<li>
-										<div class="indent_item">
-											<span class="indent_bullet">1.</span>
-											<div class="indent_content">모든 서비스는 회원권 만료일에 자동 종료됩니다.</div>
-										</div>
-									</li>
-									<li>
-										<div class="indent_item">
-											<span class="indent_bullet">2.</span>
-											<div class="indent_content">무료서비스가 제공되는 골프장, 모든 일정은 시크릿투어에서 결정하며, 일정은 사이트내 이벤트에 공지됩니다.</div>
-										</div>
-									</li>
-									<li>
-										<div class="indent_item">
-											<span class="indent_bullet">3.</span>
-											<div class="indent_content">유료서비스 연장시 결제일로 부터 다시 카운트 됩니다.</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-				</table>
+			<div class="landing_mid2">
+				<div class="landing_mid2_imgitem"><img src="./images/pay_bottom.png" alt=""></div>
+			</div>
+			<div class="landing_tape type2">
+				<div class="landing_tape_item"><img src="./images/gray_copy_item2.png" alt=""></div>
+			</div>
+			<div class="landing_ticket_wrap">
+				<div class="landing_ticket_box_group" id="ticket_wrap">
+					<div class="landing_ticket_box_cols">
+						<img src="./images/pay_ticket01.png" alt="">
+						<a href="#" class="btn_oplayer"></a>
+					</div>
+					<div class="landing_ticket_box_cols">
+						<img src="./images/pay_ticket02.png" alt="">
+						<a href="#" class="btn_oplayer"></a>
+					</div>
+					<div class="landing_ticket_box_cols">
+						<img src="./images/pay_ticket03.png" alt="">
+						<a href="#" class="btn_oplayer"></a>
+					</div>
+				</div>
+				<div class="landing_data_table_wrap">
+					<table class="landing_data_table">
+						<tr>
+							<th><span class="landing_data_label">상품명</span></th>
+							<td><div class="landing_data_value">1년 회원권 / 5년 회원권 / 평생 회원권</div></td>
+						</tr>
+						<tr>
+							<th><span class="landing_data_label">회원 기간</span></th>
+							<td><div class="landing_data_value">회원권 결제 후 첫 출발일로 부터 유효기간 내 (1년 / 5년 / 평생)</div></td>
+						</tr>
+						<tr>
+							<th><span class="landing_data_label">유의사항</span></th>
+							<td>
+								<div class="landing_data_value">
+									<ul class="indent_item_list">
+										<li>
+											<div class="indent_item">
+												<span class="indent_bullet">1.</span>
+												<div class="indent_content">모든 서비스는 회원권 만료일에 자동 종료됩니다.</div>
+											</div>
+										</li>
+										<li>
+											<div class="indent_item">
+												<span class="indent_bullet">2.</span>
+												<div class="indent_content">무료서비스가 제공되는 골프장, 모든 일정은 시크릿투어에서 결정하며, 일정은 사이트내 이벤트에 공지됩니다.</div>
+											</div>
+										</li>
+										<li>
+											<div class="indent_item">
+												<span class="indent_bullet">3.</span>
+												<div class="indent_content">유료서비스 연장시 결제일로 부터 다시 카운트 됩니다.</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
