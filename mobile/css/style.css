@@ -198,7 +198,7 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 /* sub */
 .mc_container{padding:21px;}
 .mc_tabzone{margin:0 -21px;}
-.skticky_tabzone_wrap{position:relative;height:35px;padding:0 21px;margin-bottom:15px;}
+.skticky_tabzone_wrap{position:relative;padding:0 21px;margin-bottom:15px;}
 .skticky_tabzone_wrap .mc_tabzone{}
 .skticky_tabzone_wrap .mc_tabzone{}
 .skticky_tabzone.fixed{z-index:50;position:fixed;top:0;background:#fff;border-bottom:1px solid #e7e7e7;padding:10px 0;}
@@ -213,6 +213,9 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 .mc_tab{font-size:13px;color:#1a1f28;line-height:1;white-space: nowrap;padding:10px;min-width:80px;text-align: center;border:1px solid #333c4c;border-radius:100px;display:block;}
 .mc_tab.active{color:#fff;background-color:#333c4c;}
 .mc_tab_text{}
+
+.mc_tab_list{display:flex;flex-wrap:wrap;padding:0 20px;margin-bottom:-5px;}
+.mc_tab_list > li{padding:0 5px 5px 0;}
 
 .getdata_list_zone{}
 .getdata_title_row{display:flex;justify-content: space-between;align-items: flex-end;border-bottom:1px solid #dbdbdb;padding-bottom:15px;}

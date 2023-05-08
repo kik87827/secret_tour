@@ -66,6 +66,9 @@ function layoutFunc(){
             btn_mbmenuclose = document.querySelector(".btn_mbmenuclose"),
             domHtml = document.querySelector("html"),
             domBody = document.querySelector("body");
+		
+		const mbmenu_one = document.querySelectorAll(".mbmenu_one");
+
 
         // init 
         if(mobile_mainmenu_zone === null){return;}
@@ -119,6 +122,19 @@ function layoutFunc(){
                 window.scrollTo(0, parseInt(domBody.getAttribute("data-scr")));
             },500);
         }
+
+		mbmenu_one.forEach((item)=>{
+			const thisItem = item;
+			const thisItemTwoWrap = thisItem.nextElementSibling;
+			if(!!thisItemTwoWrap){
+				thisItem.classList.add("has_two");
+			}
+			thisItem.addEventListener("click",(e)=>{
+				e.preventDefault();
+				thisItem.classList.toggle("active");
+				thisItemTwoWrap.classList.toggle("active");
+			});
+		})
     }
     mbTotal();
     
@@ -415,7 +431,6 @@ function detailBannerSwiper(){
 		const slider_slide = slider_container.querySelectorAll(".swiper-slide");
 		slider_parent.setAttribute("id","swiperParent0"+(index+1));
 		slider_container.setAttribute("id","swiper0"+(index+1));
-		console.log(slider_slide);
 		if(slider_slide.length){
 			(new Function(
 			`

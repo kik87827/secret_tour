@@ -242,14 +242,22 @@ function thisMonthBanner(){
 
 function quickMenu(){
 	const mc_wrap = document.querySelector(".mc_wrap");
+	const btn_quick_allow = document.querySelector(".btn_quick_allow");
 	const quick_item_zone = document.querySelector(".quick_item_zone");
-	let mc_wrap_pos = mc_wrap !== null ? mc_wrap.getBoundingClientRect().top + window.scrollY +90 : 0;
+	const quick_item_cont = document.querySelector(".quick_item_cont");
+	let mc_wrap_pos = mc_wrap !== null ? mc_wrap.getBoundingClientRect().top + window.scrollY - 130 : 0;
 	window.addEventListener("scroll",(e)=>{
 		if(window.scrollY > mc_wrap_pos){
 			quick_item_zone.classList.add("fixed");
 		}else{
 			quick_item_zone.classList.remove("fixed");
 		}
+	});
+	btn_quick_allow.addEventListener("click",(e)=>{
+		e.preventDefault();
+		
+		quick_item_cont.classList.toggle("fold");
+		e.currentTarget.classList.toggle("fold");
 	});
 }
 
