@@ -290,16 +290,21 @@ function listToggleOption(){
 function stickyBox(){
 	const html_dom = document.querySelector("html");
 	const body_dom = document.querySelector("body");
+	const header_dom = document.querySelector(".header_zone");
 	const footer_dom = document.querySelector(".footer_zone");
+	let header_dom_height = header_dom !== null ? header_dom.getBoundingClientRect().height : 0;
 	let footer_dom_height = footer_dom !== null ? footer_dom.getBoundingClientRect().height : 0;
 	const pay_box_item = document.querySelector(".pay_control_box_wrap");
 	let pay_pos = pay_box_item !== null ? pay_box_item.getBoundingClientRect().top + window.scrollY : 0;
 	console.log()
 	window.addEventListener("scroll",(e)=>{
+		header_dom_height = header_dom !== null ? header_dom.getBoundingClientRect().height : 0;
 		footer_dom_height = footer_dom !== null ? footer_dom.getBoundingClientRect().height : 0;
 		if(window.scrollY > pay_pos){
+			pay_box_item.style.top = header_dom_height +'px';
 			pay_box_item.classList.add("fixed");
 		}else{
+			pay_box_item.style.top = '0px';
 			pay_box_item.classList.remove("fixed");
 		}
 	});

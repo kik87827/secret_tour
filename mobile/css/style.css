@@ -198,10 +198,9 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 /* sub */
 .mc_container{padding:21px;}
 .mc_tabzone{margin:0 -21px;}
-.skticky_tabzone_wrap{position:relative;padding:0 21px;margin-bottom:15px;}
+.skticky_tabzone_wrap{position:relative;padding:0 21px 15px;min-height:56px;box-sizing: border-box;}
 .skticky_tabzone_wrap .mc_tabzone{}
-.skticky_tabzone_wrap .mc_tabzone{}
-.skticky_tabzone.fixed{z-index:50;position:fixed;top:0;background:#fff;border-bottom:1px solid #e7e7e7;padding:10px 0;}
+.skticky_tabzone.fixed{z-index:50;position:fixed;top:0;background:#fff;border-bottom:1px solid #e7e7e7;padding:10px 0;width:100%;}
 .swiper-container.mc_tab_container{width:auto;padding:0 21px;}
 .swiper-container.mc_tab_container .swiper-slide{width:auto;}
 .swiper-pagination.mc_tab_container{font-size:0;line-height:0;position:static}
@@ -307,6 +306,7 @@ select.form_select:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 .props_box_list > li:last-of-type{margin-bottom:0;}
 .props_box_item{display:flex;}
 input.props_item{width:0;height:0;overflow:hidden;opacity:0;appearance: none;position:relative;z-index:-1;}
+.props_box_guide_item{background:#3b52a3;position:relative;display:block;color:#fff;text-align: right;border-radius: 10px;padding:8px 15px 10px}
 .props_label{flex:1;background:#3b52a3;position:relative;display:block;color:#fff;text-align: right;border-radius: 10px;padding:8px 15px 10px}
 .props_label:before,
 .props_label:after{display:block;content:'';width:20px;height:20px;box-sizing: border-box;border:1px solid #fff;border-radius:100%;position:absolute;top:50%;left:20px;transform: translateY(-50%);}
@@ -396,7 +396,7 @@ input.motion_check:checked + .motion_check_label:before{left:auto;right:0;border
 .motion_check_label{display:block;width:47px;height:24px;border-radius:100px;box-sizing: border-box;background: #f2f2f2;border: 1px solid #e4e4e4;position:relative;}
 .motion_check_label:before{display:block;content:'';width:20px;height:20px;background:#fff;border:1px solid #e4e4e4;position:absolute;top:0;left:0;border-radius:100%;}
 
-.timeline_item_wrap{}
+.timeline_item_wrap{border-bottom:10px solid #f0f0f0;}
 .timeline_item{border-top:1px solid #ddd;}
 .timeline_item:last-of-type{}
 .timeline_bar{display:flex;padding:10px 50px 10px 20px;position:relative;}

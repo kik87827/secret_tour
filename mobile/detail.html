@@ -227,9 +227,10 @@
 						<li>
 							<p class="detail_spec_label">상품가격</p>
 							<div class="detail_spec_value">
+								<!-- 230510 수정 -->
 								<ul class="props_box_list">
 									<li>
-										<div class="props_box_item">
+										<!-- <div class="props_box_item">
 											<input type="radio" name="props_item" class="props_item" id="props_01" checked>
 											<label for="props_01" class="props_label">
 												<div class="props_inpara">3/29-5/10 수, 목</div>
@@ -245,10 +246,24 @@
 													</dl>
 												</div>
 											</label>
+										</div> -->
+										<div class="props_box_guide_item">
+											<div class="props_inpara">3/29-5/10 수, 목</div>
+											<div class="props_tail_wrap">
+												<dl class="props_tail_dl">
+													<dt>비회원가</dt>
+													<dd>
+														<span class="props_price_wrap">
+															<span class="props_price_value">1,299,000</span>
+															<span class="props_price_unit">원</span>
+														</span>
+													</dd>
+												</dl>
+											</div>
 										</div>
 									</li>
 									<li>
-										<div class="props_box_item">
+										<!-- <div class="props_box_item">
 											<input type="radio" name="props_item" class="props_item" id="props_02">
 											<label for="props_02" class="props_label">
 												<div class="props_inpara">3/29-5/10 수, 목</div>
@@ -264,9 +279,24 @@
 													</dl>
 												</div>
 											</label>
+										</div> -->
+										<div class="props_box_guide_item">
+											<div class="props_inpara">3/29-5/10 수, 목</div>
+											<div class="props_tail_wrap">
+												<dl class="props_tail_dl">
+													<dt>회원가</dt>
+													<dd>
+														<span class="props_price_wrap">
+															<span class="props_price_value">1,299,000</span>
+															<span class="props_price_unit">원</span>
+														</span>
+													</dd>
+												</dl>
+											</div>
 										</div>
 									</li>
 								</ul>
+								<!-- // 230510 수정 -->
 							</div>
 						</li>
 					</ul>
@@ -346,16 +376,27 @@
 			</div>
 			<div class="skticky_tabzone_wrap">
 				<div class="mc_tabzone skticky_tabzone">
-					<ul class="mc_tab_list mc_tab_container">
-						<li><a href="#tabgo_cont01" class="mc_tab active"><span class="mc_tab_text">여행일정</span></a></li>
-						<li><a href="#tabgo_cont02" class="mc_tab"><span class="mc_tab_text">선택관광/쇼핑</span></a></li>
-						<li><a href="#tabgo_cont03" class="mc_tab"><span class="mc_tab_text">참고사항</span></a></li>
-						<li><a href="#tabgo_cont04" class="mc_tab"><span class="mc_tab_text">약관.취소수수료</span></a></li>
-					</ul>
+					<div class="swiper-container mc_tab_container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#tabgo_cont01" class="mc_tab active"><span class="mc_tab_text">여행일정</span></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#tabgo_cont02" class="mc_tab"><span class="mc_tab_text">선택관광/쇼핑</span></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#tabgo_cont03" class="mc_tab"><span class="mc_tab_text">참고사항</span></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#tabgo_cont04" class="mc_tab"><span class="mc_tab_text">약관.취소수수료</span></a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="detail_utilcont_wrap">
-				<div class="detail_utilcont tabcont show_active" id="tabgo_cont01">
+				<!-- 230510 수정 -->
+				<div class="detail_utilcont" id="tabgo_cont01">
 					<div class="utilcont_total_row">
 						<span class="utilcont_total_label">전체닫기</span>
 						<div class="motion_toggle_item">
@@ -525,7 +566,7 @@
 					</div>
 				</div>
 				<div class="detail_utilcont">
-					<div class="detail_togvitem tabcont active" id="tabgo_cont02">
+					<div class="detail_togvitem active" id="tabgo_cont02">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">선택관광/쇼핑</span></a>
 						<div class="togvitem_cont">
 							<!-- 데이터 연동 -->
@@ -535,7 +576,7 @@
 							<!-- // 데이터 연동 -->
 						</div>
 					</div>
-					<div class="detail_togvitem tabcont active" id="tabgo_cont03">
+					<div class="detail_togvitem active" id="tabgo_cont03">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">참고사항</span></a>
 						<div class="togvitem_cont">
 							<!-- 데이터 연동 -->
@@ -545,7 +586,7 @@
 							<!-- // 데이터 연동 -->
 						</div>
 					</div>
-					<div class="detail_togvitem tabcont active" id="tabgo_cont04">
+					<div class="detail_togvitem active" id="tabgo_cont04">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">약관, 취소 수수료</span></a>
 						<div class="togvitem_cont">
 							<!-- 데이터 연동 -->
@@ -555,7 +596,7 @@
 							<!-- // 데이터 연동 -->
 						</div>
 					</div>
-					<div class="detail_togvitem tabcont active" id="tabgo_cont05">
+					<div class="detail_togvitem active">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">골프장정보</span></a>
 						<div class="togvitem_cont detail_banner_fxcont">
 							<!--  -->
@@ -642,7 +683,7 @@
 							<!-- // -->
 						</div>
 					</div>
-					<div class="detail_togvitem tabcont active">
+					<div class="detail_togvitem active">
 						<a href="#" class="togvitem_bar"><span class="togvitem_text">숙박정보</span></a>
 						<div class="togvitem_cont detail_banner_fxcont">
 							<!--  -->
@@ -730,6 +771,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- // 230510 수정 -->
 			</div>
 		</section>
 		<!-- // middle -->
@@ -747,7 +789,7 @@
 		</div>
 		<!-- // bottom layer -->
 		<script>
-			
+			/* 230510 수정 */
 			document.addEventListener("DOMContentLoaded",()=>{
 				detailTopSlider();
 				document.querySelectorAll(".ico_util_menu.ico_like").forEach((item)=>{
@@ -761,32 +803,48 @@
 					closeText : '닫기'
 				});
 				timelineAcc();
-				flowTab();
+				
 			});
 			
 			window.addEventListener("load",()=>{
-				//scrollTab(".mc_tab_container");
+				scrollTab(".mc_tab_container");
 				activeWrap(".mc_tab_container",".mc_tab");
 				stickyTab();
 				detailBannerSwiper();
 				detailTogItem();
+				flowTab();
 			});
 
 
 			function flowTab(){
+				const header_wrap = document.querySelector(".header_wrap");
+				const header_wrap_height = header_wrap !== null ? header_wrap.getBoundingClientRect().height : 0;
 				const flowtab = document.querySelectorAll(".mc_tab_container .mc_tab");
-				let tabcontActive = Array.from(document.querySelectorAll(".tabcont")).filter(item => item.classList.contains("show_active"))[0];
 				flowtab.forEach((item)=>{
-					item.addEventListener("click",(e)=>{
+					const thisItem = item;
+					thisItem.addEventListener("click",(e)=>{
 						e.preventDefault();
-						if(tabcontActive){
-							tabcontActive.classList.remove("show_active");
-						}
-						let thisTarget = document.querySelector(e.currentTarget.getAttribute("href"));
-						thisTarget.classList.add("show_active");
-						tabcontActive=thisTarget;
+						const thisTarget = document.querySelector(thisItem.getAttribute("href"));
+						const skticky_tabzone = document.querySelector(".skticky_tabzone.fixed");
+						const skticky_tabzone_height = skticky_tabzone !== null ? skticky_tabzone.getBoundingClientRect().height : 56;
+						setTimeout(()=>{
+							let pos = thisTarget !== null ? thisTarget.getBoundingClientRect().top+window.pageYOffset - (header_wrap_height + skticky_tabzone_height) : 0;
+							window.scrollTo(0,pos);
+						},50);
 					});
 				})
+				// let tabcontActive = Array.from(document.querySelectorAll(".tabcont")).filter(item => item.classList.contains("show_active"))[0];
+				// flowtab.forEach((item)=>{
+				// 	item.addEventListener("click",(e)=>{
+				// 		e.preventDefault();
+				// 		if(tabcontActive){
+				// 			tabcontActive.classList.remove("show_active");
+				// 		}
+				// 		let thisTarget = document.querySelector(e.currentTarget.getAttribute("href"));
+				// 		thisTarget.classList.add("show_active");
+				// 		tabcontActive=thisTarget;
+				// 	});
+				// })
 			}
 
 			function timelineAcc(){
@@ -826,6 +884,7 @@
 					});
 				});
 			}
+			/* // 230510 수정 */
 		</script>
 		<!-- footer -->
 		<footer class="footer_wrap">

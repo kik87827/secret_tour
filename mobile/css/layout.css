@@ -35,8 +35,8 @@
     font-style: normal;
 
 }
-
-body{overflow-x:hidden;}
+html,
+body{overflow-x:visible;height:auto;}
 
 strong{font-weight:500;}
 .hdtext{display:inline-block;width:0;height:0;overflow:hidden;line-height:0;color:transparent;position:absolute;top:0;left:-99999px;}
